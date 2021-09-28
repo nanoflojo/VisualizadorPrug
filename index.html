@@ -158,7 +158,7 @@ transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
         <script src="https://rawgit.com/sookoll/ol3-layerswitcher/master/src/ol3-layerswitcher.js"></script>
 		       <script src="https://unpkg.com/ol-popup@4.0.0"></script>
     		       <script src="https://unpkg.com/ol-geocoder"></script>
-    		       <div align="left"><a target="_blank" href="http://maparutasmtb.blogspot.com.es/"><img src="http://mapamtbmadrid.x10host.com/MapaRutasMTB/Iconos/MapaRutasMTBBaja.jpg" height="36" align="middle" /></a>&nbsp;&nbsp;&nbsp;
+    		       <div align="left"><a target="_blank" href="http://maparutasmtb.blogspot.com.es/"><img src="https://raw.githubusercontent.com/nanoflojo/MaparutasMTB/master/LogoMRmtbBaja.jpg" height="36" align="middle" /></a>&nbsp;&nbsp;&nbsp;
 				   <font size="+1", align="middle"><b>VISUALIZADOR PRUG</b></font> &nbsp; Arrastra y suelta tu ruta dentro del mapa para poder visualizarla (GPX, KML), o selecciona con el botón (Solo GPX):</div>
 <input type="file" id="files" name="files[]" multiple />
         <div id="map" class="map"></div>
@@ -170,9 +170,6 @@ transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 <b>Parque Nacional de la Sierra de  Guadarrama</b></p>
     <img src="https://idecyl.jcyl.es/geoserver/am/ows?service=WMS&request=GetLegendGraphic&format=image/png&width=15&height=15&layer=am:ren_cyl_pnsg_zonific&"/>
 <div style="line-height:1px;"><font size=2; color=#000;><img src="https://idecyl.jcyl.es/geoserver/am/ows?service=WMS&request=GetLegendGraphic&format=image/png&width=15&height15&layer=am:ren_cyl_pnsg_actvs_vias_cicl& "/>&nbsp; Vías Ciclistas</font></div>
-        <p><b>Zonificación P.N. Madrid</b></p>
-    <img src="http://www.madrid.org:80/geoserver/mam/ows?service=WMS&request=GetLegendGraphic&format=image/png&width=15&height=15&layer=SIGI_MA_PRUG_VIGENTE_PN&"/>
-</p>
 </div>
 </div>
 
@@ -443,19 +440,6 @@ document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
           title: "Parque Nacional de Guadarrama",
           opacity: 1.000000,
            }),
-					new ol.layer.Tile({
-                    source: new ol.source.TileWMS(({
-                              url: "http://www.madrid.org:80/geoserver/mam/wms",
-    attributions: '<a target="_blank" href="https://openlayers.org/">OpenLayers</a> Cartografía cedido por © <a target="_blank" href="http://www.comunidad.madrid/servicios/mapas/geoportal-comunidad-madrid">Información geográfica de la Comunidad de Madrid</a>',
-                              params: {
-                                "LAYERS": "SIGI_MA_PRUG_VIGENTE_PN",
-                                "TILED": "true",
-                                "VERSION": "1.3.0"},
-                            })),
-                            title: "Zonificación P.N. Guadarrama Madrid",
-							visible: false,
-                            opacity: 1.000000,
-                                                      }),
 					new ol.layer.Tile({
                     source: new ol.source.TileWMS(({
        url: "https://idecyl.jcyl.es/geoserver/am/wms",
