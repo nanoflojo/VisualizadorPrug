@@ -425,7 +425,7 @@ document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
                       ]
         }),
 		
-        new ol.layer.Group({
+       new ol.layer.Group({
           title: 'PRUG',
                 layers: [
 	 	 			new ol.layer.Tile({
@@ -442,10 +442,10 @@ document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
            }),
 					new ol.layer.Tile({
                     source: new ol.source.TileWMS(({
-       url: "https://idecyl.jcyl.es/geoserver/am/wms",
-    attributions: '',
+   url: "https://idem.madrid.org:443/geoidem/Zonas/SIGI_MA_PNSG_VIAL_CICLABLE/wms?SERVICE=WMS&",
+       attributions: '<a target="_blank" href="https://idem.madrid.org/"> © Comunidad de Madrid</a> ',
     params: {
-            "LAYERS": "am:ren_cyl_pnsg_actvs_vias_cicl",
+            "LAYERS": "SIGI_MA_PNSG_VIAL_CICLABLE",
             "TILED": "true",
             "VERSION": "1.3.0"},
             })),
